@@ -3,6 +3,7 @@ set -e
 
 echo "Updating package lists..."
 apt update
+apt install git
 
 echo "Installing sudo..."
 apt install -y sudo
@@ -13,6 +14,7 @@ echo "sudo installation complete!"
 # Download Go 1.23.8
 echo "Downloading Go 1.23.8..."
 wget https://go.dev/dl/go1.23.8.linux-amd64.tar.gz
+export PATH=$PATH:/usr/local/go/bin
 
 # Extract and install Go to /usr/local
 echo "Extracting and installing Go to /usr/local..."
