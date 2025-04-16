@@ -3,7 +3,9 @@ set -e
 
 echo "Updating package lists..."
 apt update
-apt install git
+apt install -y git
+apt install -y curl
+apt install -y wget
 
 echo "Installing sudo..."
 apt install -y sudo
